@@ -61,7 +61,9 @@ public class CubeBehaviour : MonoBehaviour
     public bool isColliding;
     public bool debug;
     public List<Contact> contacts;
-
+    public Vector3 collisionNormal;
+    public Vector3 direction;
+    public float speed;
     private MeshFilter meshFilter;
     public Bounds bounds;
     public bool isGrounded;
@@ -98,7 +100,7 @@ public class CubeBehaviour : MonoBehaviour
         }
         max = Vector3.Scale(bounds.max, transform.localScale) + transform.position;
         min = Vector3.Scale(bounds.min, transform.localScale) + transform.position;
-
+        transform.position += direction * speed * Time.deltaTime;
     }
 
     private void OnDrawGizmos()
