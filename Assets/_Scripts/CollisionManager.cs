@@ -182,6 +182,7 @@ public class CollisionManager : MonoBehaviour
                 a.contacts.Add(contactB);
                 a.isColliding = true;
                 
+                
             }
         }
         else
