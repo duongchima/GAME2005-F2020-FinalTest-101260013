@@ -62,6 +62,10 @@ public class RigidBody3D : MonoBehaviour
                 velocity.y = 0.0f;
             }
         }
+        if (bodyType == BodyType.STATIC)
+        {
+
+        }
     }
 
     public void Stop()
